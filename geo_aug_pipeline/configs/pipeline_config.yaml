@@ -1,0 +1,52 @@
+# ============================================================
+# Geometry-Preserving Augmentation Pipeline — Master Config
+# ============================================================
+
+paths:
+  raw_images_dir: "data/raw/images"
+  annotations_file: "data/raw/annotations.json"
+  augmented_dir: "data/augmented"
+  gold_standard_dir: "data/gold_standard"
+  discarded_dir: "data/discarded"
+  logs_dir: "logs"
+
+augmentation:
+  # Number of augmented variants to generate per source image
+  variants_per_image: 3
+  # Which prompt templates to use (see prompts/templates.py)
+  active_prompts:
+    - "concrete_wall"
+    - "office_interior"
+    - "brick_wall"
+    - "tile_wall"
+    - "wood_panel_interior"
+    
+  # Gemini model to target (mocked when use_mock=true)
+  model: "gemini-2.5-flash-image"
+  use_mock: false   # Set false to use real Gemini API
+
+api:
+  gemini_api_key_env: "GEMINI_API_KEY"   # Name of the env var holding key
+  max_retries: 4
+  retry_backoff_base: 2.0   # seconds; exponential: base^attempt
+  rate_limit_rpm: 10        # requests per minute
+  request_timeout_sec: 60
+
+validation:
+  ssim_threshold: 0.82      # Minimum SSIM to accept an augmented crop
+  reprojection_error_px: 3.0  # Max mean pixel error for mask alignment check
+  pixel_drift_threshold: 5.0  # Max allowed mean absolute diff on foreground
+
+curation:
+  save_metadata_json: true  # Write per-image validation scores to JSON sidecar
+  gold_copy_originals: false # Also copy original image alongside augmented
+
+batch:
+  batch_size: 8             # Images processed per worker batch
+  max_workers: 4            # Parallel threads for I/O-bound ops
+  checkpoint_every: 50      # Save progress checkpoint every N images
+
+logging:
+  level: "INFO"             # DEBUG | INFO | WARNING | ERROR
+  log_to_file: true
+  log_filename: "pipeline.log"

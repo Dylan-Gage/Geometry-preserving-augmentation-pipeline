@@ -1,0 +1,15 @@
+{
+  "source_image": "data\\raw\\images\\aa8065dd-frame_000139.png",
+  "annotation_id": 10,
+  "prompt_key": "office_interior",
+  "request_id": "b85b3815",
+  "augmentation_success": true,
+  "augmentation_error": "",
+  "validation": {
+    "passed": true,
+    "ssim": 0.8254593281131802,
+    "reprojection_error_px": 0.0,
+    "pixel_drift": 0.0,
+    "failure_reasons": []
+  }
+}

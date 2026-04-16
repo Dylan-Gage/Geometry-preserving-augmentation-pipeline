@@ -1,0 +1,15 @@
+{
+  "source_image": "data\\raw\\images\\99ffcf1a-frame_000025.png",
+  "annotation_id": 0,
+  "prompt_key": "wood_panel_interior",
+  "request_id": "f236597e",
+  "augmentation_success": true,
+  "augmentation_error": "",
+  "validation": {
+    "passed": true,
+    "ssim": 0.9573264427951721,
+    "reprojection_error_px": 0.0,
+    "pixel_drift": 0.0,
+    "failure_reasons": []
+  }
+}

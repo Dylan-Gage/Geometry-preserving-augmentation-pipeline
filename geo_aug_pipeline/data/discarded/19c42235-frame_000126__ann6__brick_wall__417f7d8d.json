@@ -1,0 +1,17 @@
+{
+  "source_image": "data\\raw\\images\\19c42235-frame_000126.png",
+  "annotation_id": 6,
+  "prompt_key": "brick_wall",
+  "request_id": "417f7d8d",
+  "augmentation_success": true,
+  "augmentation_error": "",
+  "validation": {
+    "passed": false,
+    "ssim": 0.7944887853227556,
+    "reprojection_error_px": 0.0,
+    "pixel_drift": 0.0,
+    "failure_reasons": [
+      "SSIM 0.7945 < threshold 0.82"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+# Core CV / scientific stack
+opencv-python>=4.9.0
+numpy>=1.26.0
+scikit-image>=0.22.0
+Pillow>=10.3.0
+
+# COCO tooling
+pycocotools>=2.0.7
+
+# Config
+pyyaml>=6.0.1
+
+# Gemini SDK (optional — only needed when use_mock=false)
+# google-generativeai>=0.7.0
+
+# Dev / testing
+pytest>=8.0.0
+pytest-cov>=5.0.0

@@ -1,0 +1,15 @@
+{
+  "source_image": "data\\raw\\images\\19c42235-frame_000126.png",
+  "annotation_id": 5,
+  "prompt_key": "tile_wall",
+  "request_id": "d1ac3599",
+  "augmentation_success": true,
+  "augmentation_error": "",
+  "validation": {
+    "passed": true,
+    "ssim": 0.9989316925131606,
+    "reprojection_error_px": 0.0,
+    "pixel_drift": 0.0,
+    "failure_reasons": []
+  }
+}
