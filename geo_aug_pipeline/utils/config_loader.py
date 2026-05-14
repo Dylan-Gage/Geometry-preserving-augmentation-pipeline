@@ -56,6 +56,8 @@ class ValidationConfig:
     ssim_threshold: float
     reprojection_error_px: float
     pixel_drift_threshold: float
+    min_bg_change_ratio: float   
+    max_bg_change_std: float    
 
 
 @dataclass

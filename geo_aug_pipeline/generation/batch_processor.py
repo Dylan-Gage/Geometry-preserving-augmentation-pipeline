@@ -140,7 +140,7 @@ class BatchProcessor:
             self._process_batch_parallel(work_items)
             counter += len(batch)
 
-            if counter % self.checkpoint_every == 0:
+            if counter // self.checkpoint_every > (counter - len(batch)) // self.checkpoint_every:
                 _save_checkpoint(self._processed, self.checkpoint_path)
                 logger.info("Checkpoint saved (%d processed).", counter)
 

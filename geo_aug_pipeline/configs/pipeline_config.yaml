@@ -36,6 +36,8 @@ validation:
   ssim_threshold: 0.82      # Minimum SSIM to accept an augmented crop
   reprojection_error_px: 3.0  # Max mean pixel error for mask alignment check
   pixel_drift_threshold: 5.0  # Max allowed mean absolute diff on foreground
+  min_bg_change_ratio: 0.30   # arbitrary
+  max_bg_change_std: 60.0     # arbitrary
 
 curation:
   save_metadata_json: true  # Write per-image validation scores to JSON sidecar

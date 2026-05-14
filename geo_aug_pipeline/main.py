@@ -125,6 +125,8 @@ def main() -> None:
         ssim_threshold=cfg.validation.ssim_threshold,
         reprojection_error_px=cfg.validation.reprojection_error_px,
         pixel_drift_threshold=cfg.validation.pixel_drift_threshold,
+        min_bg_change_ratio=cfg.validation.min_bg_change_ratio,  
+        max_bg_change_std=cfg.validation.max_bg_change_std,     
     )
 
     # ------------------------------------------------------------------
